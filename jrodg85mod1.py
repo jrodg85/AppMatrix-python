@@ -11,7 +11,7 @@ def estadistica_por_columna(matriz, columna=None):
         minimo = min(columna_datos)
         maximo = max(columna_datos)
         promedio = sum(columna_datos) / len(columna_datos)
-        return minimo, maximo, promedio
+        print("Minimo: ", minimo,"\nMáximo: ",  maximo,"\nPromedio: ",  promedio)
     else:
         estadisticas = []
         for i in range(len(matriz[0])):
@@ -20,16 +20,17 @@ def estadistica_por_columna(matriz, columna=None):
             maximo = max(columna_datos)
             promedio = sum(columna_datos) / len(columna_datos)
             estadisticas.append((minimo, maximo, promedio))
-        return estadisticas
+        print("Las estadisticas para cada unas de las filas tiene el siguiente valor: (Mínimo, Máximo, Promedio)")
+        print (estadisticas)
 
 
 def estadistica_por_fila(matriz, fila=None):
-    if fila is not None:
+    if fila != None:
         fila_datos = matriz[fila]
         minimo = min(fila_datos)
         maximo = max(fila_datos)
         promedio = sum(fila_datos) / len(fila_datos)
-        return minimo, maximo, promedio
+        print("Minimo: ", minimo,"\nMáximo: ",  maximo,"\nPromedio: ",  promedio)
     else:
         estadisticas = []
         for fila in matriz:
@@ -37,4 +38,5 @@ def estadistica_por_fila(matriz, fila=None):
             maximo = max(fila)
             promedio = sum(fila) / len(fila)
             estadisticas.append((minimo, maximo, promedio))
-        return estadisticas
+        print("Las estadisticas para cada unas de las filas tiene el siguiente valor: (Mínimo, Máximo, Promedio)")
+        print (estadisticas)
